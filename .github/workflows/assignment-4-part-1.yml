@@ -1,0 +1,19 @@
+name: Assignment 4 Part 1 Workflow
+on: [push, pull_request]
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Setup
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential cmake
+      - name: Run Unit Tests
+        run: |
+          ./unit-test.sh
+      - name: Run Full Tests
+        run: |
+          ./full-test.sh
