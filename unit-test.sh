@@ -2,14 +2,20 @@
 # Script to run unit tests
 set -e
 
+# Get the directory of the script
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
 # Ensure build directory exists
-mkdir -p build
+mkdir -p "$SCRIPT_DIR/build"
 
 # Change to the build directory
-cd build
+cd "$SCRIPT_DIR/build"
 
-# Run CMake to generate build files
-cmake ..
+# Remove existing CMakeCache.txt to avoid path conflicts
+rm -f CMakeCache.txt
+
+# Run CMake to generate build files, using the script's directory as source
+cmake "$SCRIPT_DIR"
 
 # Build the project
 make
