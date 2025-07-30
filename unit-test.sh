@@ -1,13 +1,18 @@
 #!/bin/bash
-# Run unit tests for the assignment
+# Script to run unit tests
+set -e
 
-# Automate these steps from the readme:
-# Create a build subdirectory, change into it, run
-# cmake .. && make && run the assignment-autotest application
+# Ensure build directory exists
 mkdir -p build
+
+# Change to the build directory
 cd build
+
+# Run CMake to generate build files
 cmake ..
-make clean
+
+# Build the project
 make
-cd ..
-./build/assignment-autotest/assignment-autotest
+
+# Run the assignment-autotest executable
+./assignment-autotest/assignment-autotest
