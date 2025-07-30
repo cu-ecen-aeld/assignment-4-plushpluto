@@ -1,5 +1,5 @@
 # aesd-assignments
-[![Assignment 4 Part 1 Workflow](https://github.com/cu-ecen-aeld/assignment-4-plushpluto/actions/workflows/assignment-4-part-1.yml/badge.svg)](https://github.com/cu-ecen-aeld/assignment-4-plushpluto/actions/workflows/assignment-4-part-1.yml)
+![Assignment 4 Part 1 Workflow](https://github.com/cu-ecen-aeld/assignment-4-plushpluto/workflows/Assignment%204%20Part%201%20Workflow/badge.svg)
 
 This repo contains public starter source code, scripts, and documentation for Advanced Embedded Software Development (ECEN-5713) and Advanced Embedded Linux Development assignments University of Colorado, Boulder.
 
